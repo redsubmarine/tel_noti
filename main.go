@@ -63,7 +63,7 @@ func SetupConfig() {
 		log.Fatal(err)
 	}
 
-	chatID, err := strconv.Atoi(cid)
+	chatID, err := strconv.ParseInt(cid, 10, 64)
 	if err != nil {
 		log.Fatal(fmt.Errorf("chat id must be integer: %w", err))
 	}
